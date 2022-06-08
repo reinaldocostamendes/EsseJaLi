@@ -1,0 +1,25 @@
+﻿@model IEnumerable<EsseJaLi.ViewModels.LeitorViewModel>
+<div class="container-fluid">
+<div class="row">
+
+@foreach (var item in Model) {
+        <div class="col-xs-12 col-md-12">
+            <div class="leitor">
+               <!-- <div class="lp">
+                <img src="images/esse_logo2.png"/>
+                </div>-->
+            <div>
+               <h3>@Html.DisplayFor(modelItem => item.Nome)</h3> 
+            </div>       
+     
+            <div class="trofeu">
+             <img src="~/images/trofeu.png"/> 
+             <span>@Html.DisplayFor(modelItem => item.Pontuacao) Pontos</span> |
+             <span>Leitor de @Html.DisplayFor(modelItem => item.LeitorTrofeus)</span>  
+            </div>
+        </div>
+        </div>
+}
+</div>
+
+</div>

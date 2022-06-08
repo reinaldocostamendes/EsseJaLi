@@ -1,0 +1,38 @@
+﻿@using EsseJaLi.ViewModels
+@model RegisterLeitorViewModel
+<div class="wrapper">
+       <!--   <div class="logo">
+            <img src="/images/esse_logo.png" alt="Logo">
+        </div>
+     <div class="text-center mt-4 name">
+            Esse Já Lí
+        </div>-->
+        <form asp-controller="Leitores" asp-action="Register"  class="p-1 mt-1" method="post">
+              <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" asp-for="FirstName" name="FirstName" id="FirstName" placeholder="Primeiro Nome">
+                 <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+              <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="text" asp-for="LastName" name="LastName" id="LastName" placeholder="Ultimo Nome">
+                 <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="email" asp-for="Username" name="UserName" id="UserName" placeholder="Email">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" asp-for="Password" name="Password" id="Password" placeholder="Senha">
+                 <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+             <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" asp-for="Confirm" name="Confirm" id="Confirm" placeholder="Repita Senha">
+                 <span asp-validation-for="Confirm" class="text-danger"></span>
+            </div>
+            <button class="btn mt-3">Registar</button>
+        </form>
+     
+    </div>

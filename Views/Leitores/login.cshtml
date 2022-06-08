@@ -1,0 +1,25 @@
+﻿@using EsseJaLi.ViewModels
+@model LoginLeitorViewModel
+
+<div class="wrapper">
+       <!-- <div class="logo">
+            <img src="/images/esse_logo.png" alt="Logo">
+        </div>
+        <div class="text-center mt-4 name">
+            Esse Já Lí
+        </div>-->
+        <form asp-controller="Leitores" asp-action="Login" method="post"  class="p-1 mt-1">
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input type="email" asp-for="UserName" name="UserName" id="userName" placeholder="Username">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input type="password" asp-for="Password" name="Password" name="Password" id="Password" placeholder="Password">
+            </div>
+            <button class="btn mt-3">Entrar</button>
+        </form>
+        <div class="text-center fs-6">
+            <a href="#">Esqueceu password?</a> ou <a href="#">Registar</a>
+        </div>
+    </div>
